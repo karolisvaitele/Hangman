@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="/style.css">
+    </head>
+    <body>
+        <div id="main">
+            <div id="display">
+                <h2>Your lives:</h2>
+                <% lives.times do %>
+                    <img src="/images/heart.png" alt="Heart" height="32" width="32">
+                <% end %>
+                <h2>Word:</h2>
+                <div id="encrypted_word">
+                    <%= encrypted_word.join(" ").upcase %><br>
+                </div>
+            </div>
+            <form action="/game" method=POST autocomplete="off">
+                <h2>Enter your guess:</h2>
+                <input type="text" name="guessed_letter" maxlength="1">
+                <input type="submit" value="Guess"><br>
+            </form>
+            <div>
+                <h2>Incorrect guesses:</h2>
+                <p id="incorrect_guesses">
+                    <%= incorrect_guesses.join(", ").upcase %>
+                </p>
+            </div>
+        </div>
+    </body>
+</html>

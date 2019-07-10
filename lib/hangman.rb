@@ -1,10 +1,8 @@
-require 'yaml'
-
 class Hangman
     attr_accessor :secret_word, :encrypted_word, :lives, :incorrect_guesses
     def initialize
         @secret_word = get_secret_word
-        @encrypted_word = encrypt_word(secret_word)
+        @encrypted_word = encrypt_word(@secret_word)
         @lives = 6
         @incorrect_guesses = []
     end
@@ -27,7 +25,7 @@ class Hangman
     end
 
     def decrypt_word(letter)
-        indexes = @secret_word.split("").each_index.select {|l| l == letter}
-        indexes.each {|i| @encrypt_word[i] = letter}
+        indexes = @secret_word.split("").each_index.select {|i| @secret_word[i] == letter}
+        indexes.each {|i| @encrypted_word[i] = letter}
     end
 end

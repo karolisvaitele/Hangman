@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="/style.css">
+    </head>
+    <body>
+        <div id="main">
+            <%if win%>
+                <h1>Congratulations! You win!</h1>
+            <%else%>
+                <h1>Unfortunately, You lost</h1>
+            <%end%>
+            <h2>The secret word was "<%= secret_word.split("").join(" ").upcase %>"</h2>
+            <form action="/" method=GET>
+                <input type="submit" value="Back to main menu">
+            </form>
+        </div>
+    </body>
+</html>

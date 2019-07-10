@@ -1,0 +1,39 @@
+html {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 14px;
+  text-align: center;  
+  background-color: rgb(177, 252, 245);
+}
+#main {
+    background-color: white;
+    width: 600px;
+    display: inline-block;
+    padding-bottom: 20px;
+    border: 15px solid rgba(10, 87, 79, 0.514);
+    border-radius: 50px;
+    box-shadow: 4px 4px 20px rgb(119, 119, 119);
+}
+#incorrect_guesses {
+    font-size: 30px;
+}
+input[type=submit] {
+    font-size: 18px;
+}
+input[type=text] {
+    font-size: 18px;
+    width: 100px;
+    text-align: center;
+    box-shadow: 1px 1px 5px gray;
+    border: none;
+    border-radius: 5px;
+    text-transform: uppercase;
+}
+h1 {
+    font-size: 24px;
+}
+h2 {
+    font-size: 18px;
+}
+#encrypted_word {
+    font-size: 36px;
+}
